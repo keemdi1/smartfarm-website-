@@ -25,8 +25,10 @@ btn.addEventListener("click", () => {
   btn.classList.toggle("on");
   if (btn.classList.contains("on")) {
     btn.textContent = "ON";
+    firebase.database().ref("autoBtn").set(1);
   } else {
       btn.textContent = "OFF";
+      firebase.database().ref("autoBtn").set(0);
     }
   });
 // NÚT ! thuộc tính ----------------------
