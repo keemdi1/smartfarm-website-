@@ -139,7 +139,7 @@ body {
     display: none; /* Ban đầu ẩn thông tin */
     position: absolute;
     top: 50%;
-    left: 96%;
+    left: 124%;
     transform: translateY(-50%);
     padding: 10px;
     background-color: #fff;
