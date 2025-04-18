@@ -188,6 +188,19 @@
       const value = snapshot.val();
       updateUIFromFirebase(imgfan, btn3, btn4, 'img/fanon.png', 'img/fan.png', value);
     });
+    // Khi trang load, đọc trạng thái từ Firebase
+    firebase.database().ref("autoBtn").on("value", (snapshot) => {
+      const value = snapshot.val();
+      if (value === 1) {
+        btn.classList.add("on");
+        btn.classList.remove("off");
+        btn.textContent = "ON";
+      } else {
+        btn.classList.remove("on");
+        btn.classList.add("off");
+        btn.textContent = "OFF";
+      }
+    });
   </script>
  
 </body>
